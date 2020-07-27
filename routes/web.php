@@ -20,5 +20,15 @@ Route::get('/', function () {
 //Activate `verify' route for email autentication
 Auth::routes(['verify'=>true]);
 
-// ->middleware for acces only if user has been email verified
+// ->middleware for acces only if user has been email verified, 
 Route::get('/home', 'HomeController@index')->name('home')->Middleware('verified');
+
+//Route for admin user
+Route::get('/adm', 'UsersController@myHome');
+
+//Route for admin user
+Route::get('/table', 'AdminResource@index');
+
+//Route for stander users
+Route::get('/', 'UsersController@myUsers');
+
