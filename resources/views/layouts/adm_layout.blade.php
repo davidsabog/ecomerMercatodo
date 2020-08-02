@@ -2,84 +2,80 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="au theme template">
-    <meta name="author" content="Hau Nguyen">
-    <meta name="keywords" content="au theme template">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | Dashboard</title>
 
-    <!-- Title Page-->
-    <title>Dashboard</title>
-
-    <!-- Fontfaces CSS-->
-    <link href="css/font-face.css" rel="stylesheet" media="all">
-    <link href="vendorAdm/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link href="vendorAdm//font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
-    <link href="vendorAdm//mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-
-    <!-- Bootstrap CSS-->
-    <link href="vendorAdm//bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
-
-    <!-- Vendor CSS-->
-    <link href="vendorAdm//animsition/animsition.min.css" rel="stylesheet" media="all">
-    <link href="vendorAdm//bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
-    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
-    <link href="vendorAdm//css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
-    <link href="vendorAdm//slick/slick.css" rel="stylesheet" media="all">
-    <link href="vendorAdm//select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="vendorAdm//perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
-
-    <!-- Main CSS-->
-    <link href="css/theme.css" rel="stylesheet" media="all">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
 
 </head>
 
-<body class="animsition">
+<body >
 
-<div id="wrapper">
-       <!-- Navigation -->
-       <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-         @include('layouts.adm_partial.sidebar')    
+
+         @include('layouts.adm_partial.sidebar')
          @include('layouts.adm_partial.header_adm')
-        </nav>
-       <!-- <div id="page-wrapper">          -->
-       <div class="main-content">
-                <div class="section__content section__content--p30">
-                    <div class="container">
-                    @yield('content')
-                    </div>
-                </div>
-        </div>    
-        
-        <!-- </div>    -->
-</div>
+         @yield('content')
 
-       
-      
-    <!-- Jquery JS-->
-    <script src="vendorAdm/jquery-3.2.1.min.js"></script>
-    <!-- Bootstrap JS-->
-    <script src="vendorAdm/bootstrap-4.1/popper.min.js"></script>
-    <script src="vendoraAdm/bootstrap-4.1/bootstrap.min.js"></script>
-    <!-- Vendor JS       -->
-    <script src="vendorAdm/slick/slick.min.js">
-    </script>
-    <script src="vendorAdm/wow/wow.min.js"></script>
-    <script src="vendorAdm/animsition/animsition.min.js"></script>
-    <script src="vendorAdm/bootstrap-progressbar/bootstrap-progressbar.min.js">
-    </script>
-    <script src="vendorAdm/counter-up/jquery.waypoints.min.js"></script>
-    <script src="vendorAdm/counter-up/jquery.counterup.min.js">
-    </script>
-    <script src="vendorAdm/circle-progress/circle-progress.min.js"></script>
-    <script src="vendorAdm/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="vendorAdm/chartjs/Chart.bundle.min.js"></script>
-    <script src="vendorAdm/select2/select2.min.js">
-    </script>
 
-    <!-- Main JS-->
-    <script src="js/adm_main.js"></script>
+
+
+
+
+<!-- INICIO FOOTER SCRIPT -->
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
 
 </body>
 
