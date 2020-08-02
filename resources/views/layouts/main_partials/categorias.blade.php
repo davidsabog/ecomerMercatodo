@@ -1,4 +1,6 @@
+ <!--================ Hero Carousel start =================-->
 
+ <section class="section-margin mt-0">
     <div class="owl-carousel owl-theme hero-carousel">
       <div class="hero-carousel__slide">
         <img src="img/home/hero-slide1.png" alt="" class="img-fluid">
@@ -22,4 +24,5 @@
         </a>
       </div>
     </div>
-
+  </section>
+  <!--================ Hero Carousel end =================-->
