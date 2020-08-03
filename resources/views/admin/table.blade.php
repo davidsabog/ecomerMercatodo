@@ -4,14 +4,18 @@
 
 
 @section('content')
-<div class="container">
-<table class="table table">
+
+<div class=" container-fluid">
+    <br>
+<h2>Lista de Usuarios Registrados <a href="{{route('admin.create')}}"><button type="button" class="btn btn-success float-right">Agregar Usuario</button></a> </h2>
+    <br>
+<table class="table ">
   <thead>
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Nombre</th>
       <th scope="col">EMAIL</th>
-      
+
     </tr>
   </thead>
   <tbody>

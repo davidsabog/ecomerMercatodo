@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 
-class AdminResource extends Controller
+class AdminResourceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class AdminResource extends Controller
      */
     public function index()
     {
-   
+
         $users=User::all();
-        return view('table',['users'=>$users]);
+        return view('admin.table',['users'=>$users]);
     }
 
     /**
@@ -27,6 +27,7 @@ class AdminResource extends Controller
     public function create()
     {
         //
+        return view('admin.create_users');
     }
 
     /**
@@ -37,7 +38,16 @@ class AdminResource extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $usuarios=new User();
+        $usuarios->name=request('name');
+        $usuarios->email=request('email');
+        $usuarios->password=request('password');
+
+        $usuarios->save();
+
+        return view('admin');
+
+
     }
 
     /**
