@@ -18,7 +18,7 @@ class UsersController extends Controller
      */
     public function myHome()
     {
-        return view('adm');
+        return view('admin.adm');
     }
     /**
      * Show the my users page.
@@ -28,7 +28,7 @@ class UsersController extends Controller
     public function myUsers()
     {
         return view('welcome');
-  
+
     }
 
 }
