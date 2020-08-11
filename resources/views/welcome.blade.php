@@ -5,6 +5,8 @@
 
 @section('content')
      @include('layouts.main_partials.main_carrusel')
+    
+     
 @endsection
 
 

@@ -26,7 +26,7 @@
             <input type="email" class="form-control" name="email" aria-describedby="emailHelp" value="{{$user->email}}" placeholder="Escrube tu Email">
             <small id="emailHelp" class="form-text text-muted"></small>
             </div>
-            <button type="submit" class="btn btn-primary">Registrar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
             <button type="reset" class="btn btn-danger">Cancelar</button>
 
         </form>

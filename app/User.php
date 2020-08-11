@@ -6,10 +6,14 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\Permission\Traits\HasRoles;
 
 //implements MustVeriryEmail for use de email verification funtion.
 class User extends Authenticatable implements MustVerifyEmail
 {
+    //use of spatie library trade
+    use HasRoles; 
+
     use Notifiable;
     //Use of SoftDelates trade
     use SoftDeletes;

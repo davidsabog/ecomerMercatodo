@@ -98,6 +98,11 @@ class AdminResourceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //use of softdelete
+        $usuario=User::find($id);
+        $usuario->delete();
+        Session::flass('messege','El usuatio ha sido deshabilitado');
+       
+        return redirect('/admin');
     }
 }

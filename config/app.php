@@ -166,6 +166,8 @@ return [
          * Package Service Providers...
          *///Providers for Recaptcha, From Install Recapcha V3 domumentation of Biscolab
         Biscolab\ReCaptcha\ReCaptchaServiceProvider::class,
+        /*Spatie Laravel Permision*/
+        Spatie\Permission\PermissionServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -174,6 +176,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+
 
     ],
 

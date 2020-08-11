@@ -29,4 +29,4 @@ Route::get('/adm', 'UsersController@myHome');
 //Route for stander users
 Route::get('/', 'UsersController@myUsers');
 
-Route::resource('admin', 'AdminResourceController');
+Route::resource('admin', 'AdminResourceController')->Middleware('permission');
