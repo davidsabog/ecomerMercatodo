@@ -2,23 +2,15 @@
 
 namespace App;
 
+use App\Traits\HasRolesAndPermissions;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\Permission\Traits\HasRoles;
 
-//implements MustVeriryEmail for use de email verification funtion.
 class User extends Authenticatable implements MustVerifyEmail
 {
-    //use of spatie library trade
-    use HasRoles; 
+    use Notifiable,HasRolesAndPermissions;
 
-    use Notifiable;
-    //Use of SoftDelates trade
-    use SoftDeletes;
-    //**
-    protected $dates = ['deleted_at'];
     /**
      * The attributes that are mass assignable.
      *
@@ -46,4 +38,3 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 }
-

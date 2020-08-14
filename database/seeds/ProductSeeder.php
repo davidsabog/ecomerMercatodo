@@ -1,5 +1,7 @@
 <?php
 
+use App\Product;
+use App\ProductCategory;
 use Illuminate\Database\Seeder;
 
 class ProductSeeder extends Seeder
@@ -11,13 +13,12 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        //
-        $categories = \App\ProductCategory::pluck('id');
- 
-        $categories->each(function ($category) {
-            factory(\App\Product::class)->times(rand(12, 28))->create([
-                'category_id' => $category,
+        $categories=ProductCategory::pluck('id');
+
+        foreach($categories as $categoryId){
+            factory(Product::class)->times(rand(15,20))->create([
+                'category_id'=>$categoryId,
             ]);
-        });
+        }
     }
 }

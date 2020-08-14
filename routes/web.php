@@ -2,7 +2,7 @@
 
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
-
+use App\Product;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +27,18 @@ Route::get('/home', 'HomeController@index')->name('home')->Middleware('verified'
 Route::get('/adm', 'UsersController@myHome');
 
 //Route for stander users
-Route::get('/', 'UsersController@myUsers');
+// Route::get('/', 'UsersController@myUsers');
 
-Route::resource('admin', 'AdminResourceController')->Middleware('permission');
+Route::resource('/demo', 'AdminController');
+
+
+Route::resource('users', 'UsersController');
+Route::resource('roles', 'RolesController');
+Route::resource('/products','ProductsController');
+Route::resource('/productsCategory','ProductsCategoryController');
+
+Route::get('/demo',function(){
+    $products=Product::all();
+
+    return view('/demo',['products'=>$products]);
+});
